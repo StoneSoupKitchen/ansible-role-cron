@@ -1,0 +1,75 @@
+---
+- name: Configure /etc/crontab
+  file:
+    state: file
+    path: /etc/crontab
+    owner: root
+    group: root
+    mode: '0600'
+
+- name: Create /etc/cron.hourly
+  file:
+    state: directory
+    path: /etc/cron.hourly
+    owner: root
+    group: root
+    mode: '0700'
+
+- name: Create /etc/cron.daily
+  file:
+    state: directory
+    path: /etc/cron.daily
+    owner: root
+    group: root
+    mode: '0700'
+
+- name: Create /etc/cron.weekly
+  file:
+    state: directory
+    path: /etc/cron.weekly
+    owner: root
+    group: root
+    mode: '0700'
+
+- name: Create /etc/cron.monthly
+  file:
+    state: directory
+    path: /etc/cron.monthly
+    owner: root
+    group: root
+    mode: '0700'
+
+- name: Create /etc/cron.d
+  file:
+    state: directory
+    path: /etc/cron.d
+    owner: root
+    group: root
+    mode: '0700'
+
+- name: Remove /etc/cron.deny
+  file:
+    state: absent
+    path: /etc/cron.deny
+
+- name: Remove /etc/at.deny
+  file:
+    state: absent
+    path: /etc/at.deny
+
+- name: Configure /etc/cron.allow
+  file:
+    state: file
+    path: /etc/cron.allow
+    owner: root
+    group: root
+    mode: '0640'
+
+- name: Configure /etc/at.allow
+  file:
+    state: file
+    path: /etc/at.allow
+    owner: root
+    group: root
+    mode: '0640'
+

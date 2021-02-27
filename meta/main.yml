@@ -1,0 +1,16 @@
+galaxy_info:
+  role_name: cron
+  author: stonesoupkitchen
+  description: Manage cron on Linux
+  license: BSD-3-Clause
+  min_ansible_version: 2.9
+  platforms:
+    - name: Debian
+      versions:
+        - buster
+  galaxy_tags:
+    - cron
+    - anacron
+    - at
+dependencies: []
+

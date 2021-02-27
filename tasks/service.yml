@@ -1,0 +1,13 @@
+---
+- name: Start and enable cron
+  service:
+    name: cron
+    state: started
+    enabled: yes
+
+- name: Start and enable atd
+  service:
+    name: atd
+    state: started
+    enabled: yes
+

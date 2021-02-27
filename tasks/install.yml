@@ -1,0 +1,22 @@
+# Install the cron, anacron, and at packages.
+---
+- name: Define cron_package
+  set_fact:
+    cron_package: "{{ __cron_package }}"
+  when: cron_package is not defined
+
+- name: Define at_package
+  set_fact:
+    at_package: "{{ __at_package }}"
+  when: at_package is not defined
+
+- name: Install cron
+  apt:
+    name: "{{ cron_package }}"
+    state: "{{ cron_package_state }}"
+
+- name: Install at
+  apt:
+    name: "{{ at_package }}"
+    state: "{{ at_package_state }}"
+
