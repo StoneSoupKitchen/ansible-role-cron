@@ -57,19 +57,35 @@
     state: absent
     path: /etc/at.deny
 
+- name: Check existence of /etc/cron.allow
+  stat:
+    path: /etc/cron.allow
+  register: __cron_allow_file
+
 - name: Configure /etc/cron.allow
   file:
-    state: file
+    state: touch
     path: /etc/cron.allow
     owner: root
     group: root
     mode: '0640'
+  when:
+    - __cron_allow_file.stat.exists is defined
+    - not __cron_allow_file.stat.exists 
+
+- name: Check existence of /etc/at.allow
+  stat:
+    path: /etc/at.allow
+  register: __at_allow_file
 
 - name: Configure /etc/at.allow
   file:
-    state: file
+    state: touch
     path: /etc/at.allow
     owner: root
     group: root
     mode: '0640'
+  when:
+    - __at_allow_file.stat.exists is defined
+    - not __at_allow_file.stat.exists 
 
