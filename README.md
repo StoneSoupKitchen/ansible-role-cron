@@ -20,19 +20,20 @@ TODO.
 
 ## Development
 
-Ceate a virtual environment and install modules from requirements.txt:
+A Makefile is included for easier development with `pipenv`.
+After cloning this repository,
+use the following commands to set up an environment.
 
-    python3 -m venv venv
-    source venv/bin/activate
-    pip install -r requirements.txt
+    pipenv shell
+    pipenv install -r requirements.txt
 
-Enable pre-commit checks:
+To lint your changes with ansible-lint:
 
-    pre-commit install
+    make lint
 
-Run molecule tests:
+To run tests with molecule:
 
-    molecule test
+    make test
 
 ## License
 
