@@ -1,6 +1,6 @@
 [![CI](https://github.com/StoneSoupKitchen/ansible-role-sudo/actions/workflows/ci.yml/badge.svg)](https://github.com/StoneSoupKitchen/ansible-role-sudo/actions/workflows/ci.yml)
 
-# Ansible role: sudo
+# Ansible role: cron
 
 An Ansible role for configuring cron and at daemons.
 
