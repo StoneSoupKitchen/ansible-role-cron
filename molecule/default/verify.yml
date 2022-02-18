@@ -7,6 +7,101 @@
     package_facts:
       manager: "auto"
 
-  - name: Example assertion
-    assert:
-      that: true
+  - name: Package cron should be installed
+    package:
+      name: cron
+      state: present
+    check_mode: true
+    register: install
+    failed_when: (install is changed) or (install is failed)
+
+  - name: Package at should be installed
+    package:
+      name: at
+      state: present
+    check_mode: true
+    register: install
+    failed_when: (install is changed) or (install is failed)
+
+  - name: File /etc/crontab should exist with correct permissions
+    file:
+      path: /etc/crontab
+      state: file
+      owner: root
+      group: root
+      mode: '0600'
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
+  - name: Directory /etc/cron.hourly should exist with correct permissions
+    file:
+      path: /etc/cron.hourly
+      state: directory
+      owner: root
+      group: root
+      mode: '0700'
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
+  - name: Directory /etc/cron.weekly should exist with correct permissions
+    file:
+      path: /etc/cron.weekly
+      state: directory
+      owner: root
+      group: root
+      mode: '0700'
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
+  - name: Directory /etc/cron.monthly should exist with correct permissions
+    file:
+      path: /etc/cron.monthly
+      state: directory
+      owner: root
+      group: root
+      mode: '0700'
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
+  - name: File /etc/cron.allow should exist with correct permissions
+    file:
+      path: /etc/cron.allow
+      state: file
+      owner: root
+      group: root
+      mode: '0640'
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
+  - name: File /etc/cron.deny should not exist
+    file:
+      path: /etc/cron.deny
+      state: absent
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
+  - name: File /etc/at.allow should exist with correct permissions
+    file:
+      path: /etc/at.allow
+      state: file
+      owner: root
+      group: root
+      mode: '0640'
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
+  - name: File /etc/at.deny should not exist
+    file:
+      path: /etc/cron.deny
+      state: absent
+    check_mode: true
+    register: config
+    failed_when: (config is changed) or (config is failed)
+
