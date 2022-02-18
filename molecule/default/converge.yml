@@ -6,7 +6,7 @@
       set_fact:
         ansible_virtualization_type: "docker"
 
-    - name: "Update apt cache"
+    - name: "Sync package repositories"
       apt:
         update_cache: true
 
