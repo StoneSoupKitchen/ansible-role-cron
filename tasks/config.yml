@@ -88,4 +88,3 @@
   when:
     - __at_allow_file.stat.exists is defined
     - not __at_allow_file.stat.exists 
-

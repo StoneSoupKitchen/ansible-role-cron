@@ -1,22 +1,34 @@
-# stonesoupkitchen-cron
+[![CI](https://github.com/StoneSoupKitchen/ansible-role-sudo/actions/workflows/ci.yml/badge.svg)](https://github.com/StoneSoupKitchen/ansible-role-sudo/actions/workflows/ci.yml)
+
+# Ansible role: sudo
 
 An Ansible role for configuring cron and at daemons.
 
 ## Requirements
 
-TODO.
+Supported operating systems:
+* Debian 10 (Buster)
+* Debian 11 (Bullseye)
 
 ## Role Variables
 
-TODO.
+The following table lists all variables that can be overridden
+and their default values.
 
-## Dependencies
+| Name                     | Default Value | Description                      |
+| ------------------------ | ------------- | -------------------------------- |
+| `at_package` | at | Name of the at package. Use `name=ver` format to pin. |
+| `at_package_state` | present | Installation state for the at package. |
+| `cron_package` | cron | Name of the cron package. Use `name=ver` format to pin. |
+| `cron_package_state` | present | Installation state for the cron package. |
 
-TODO.
+## Examples
 
-## Example Playbook
-
-TODO.
+```yaml
+- hosts: all
+  roles:
+    - stonesoupkitchen.cron
+```
 
 ## Development
 
@@ -24,8 +36,7 @@ A Makefile is included for easier development with `pipenv`.
 After cloning this repository,
 use the following commands to set up an environment.
 
-    pipenv shell
-    pipenv install -r requirements.txt
+    pipenv install --dev
 
 To lint your changes with ansible-lint:
 
@@ -37,5 +48,5 @@ To run tests with molecule:
 
 ## License
 
-See [LICENSE](LICENSE).
+See [LICENSE](./LICENSE).
 
