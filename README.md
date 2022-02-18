@@ -1,4 +1,4 @@
-[![CI](https://github.com/StoneSoupKitchen/ansible-role-sudo/actions/workflows/ci.yml/badge.svg)](https://github.com/StoneSoupKitchen/ansible-role-sudo/actions/workflows/ci.yml)
+[![CI](https://github.com/StoneSoupKitchen/ansible-role-cron/actions/workflows/ci.yml/badge.svg)](https://github.com/StoneSoupKitchen/ansible-role-cron/actions/workflows/ci.yml)
 
 # Ansible role: cron
 
