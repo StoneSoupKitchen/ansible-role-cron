@@ -104,4 +104,3 @@
     check_mode: true
     register: config
     failed_when: (config is changed) or (config is failed)
-
