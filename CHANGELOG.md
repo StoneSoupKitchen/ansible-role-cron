@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2022-02-18
+
+### Bug Fixes
+
+- Resolve ansible-lint errors (56d7777)
+
 ## [0.1.0] - 2022-02-18
 
 ### Documentation
