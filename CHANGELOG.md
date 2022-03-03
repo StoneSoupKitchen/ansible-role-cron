@@ -1,6 +1,14 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2022-03-03
+
+### Miscellaneous Tasks
+
+- Bump actions/setup-python from 2 to 3 (#2) (9f2bd1a)
+- Bump ansible-core from 2.11.8 to 2.11.9 (#3) (60a43b1)
+- Bump actions/checkout from 2 to 3 (#4) (d7d5bbc)
+
 ## [0.1.1] - 2022-02-18
 
 ### Bug Fixes
@@ -17,17 +25,6 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Refresh code repository (#1) (55d1e50)
-
-### Other
-
-- Initial commit (9756b28)
-- Create .allow files if they don't exist (92e898b)
-- Migrate LICENSE.md to LICENSE (cb1a1de)
-- Add Makefile and developer documentation (f6274f5)
-- Fix improperly named .gitignore file (dfffef3)
-- Remove pre-commit configuration file (c59d782)
-- Add molecule test directory (6bddd38)
-- Refresh apt cache prior to running molecule tests (121c145)
 
 ### Testing
 
