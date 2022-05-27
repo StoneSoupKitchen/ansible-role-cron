@@ -1,6 +1,12 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.4] - 2022-05-27
+
+### Miscellaneous Tasks
+
+- Bump ansible-core from 2.11.11 to 2.11.12 (#7) (1a00b49)
+
 ## [0.1.3] - 2022-04-29
 
 ### Miscellaneous Tasks
@@ -32,6 +38,17 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Refresh code repository (#1) (55d1e50)
+
+### Other
+
+- Initial commit (9756b28)
+- Create .allow files if they don't exist (92e898b)
+- Migrate LICENSE.md to LICENSE (cb1a1de)
+- Add Makefile and developer documentation (f6274f5)
+- Fix improperly named .gitignore file (dfffef3)
+- Remove pre-commit configuration file (c59d782)
+- Add molecule test directory (6bddd38)
+- Refresh apt cache prior to running molecule tests (121c145)
 
 ### Testing
 
