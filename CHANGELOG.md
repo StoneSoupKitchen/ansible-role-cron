@@ -1,6 +1,17 @@
 # Changelog
 All notable changes to this project will be documented in this file.
 
+## [0.1.5] - 2022-08-27
+
+### Miscellaneous Tasks
+
+- Bump actions/setup-python from 3 to 4 (#8) (52b17ce)
+- Bump molecule from 3.6.1 to 4.0.0 (#9) (8f39b91)
+- Bump yamllint from 1.26.3 to 1.27.1 (#10) (631b37e)
+- Bump molecule-docker from 1.1.0 to 2.0.0 (#11) (7c2afc6)
+- Bump molecule from 4.0.0 to 4.0.1 (#12) (46334b9)
+- Bump docker from 5.0.3 to 6.0.0 (#13) (1ddb0a3)
+
 ## [0.1.4] - 2022-05-27
 
 ### Miscellaneous Tasks
@@ -38,17 +49,6 @@ All notable changes to this project will be documented in this file.
 ### Miscellaneous Tasks
 
 - Refresh code repository (#1) (55d1e50)
-
-### Other
-
-- Initial commit (9756b28)
-- Create .allow files if they don't exist (92e898b)
-- Migrate LICENSE.md to LICENSE (cb1a1de)
-- Add Makefile and developer documentation (f6274f5)
-- Fix improperly named .gitignore file (dfffef3)
-- Remove pre-commit configuration file (c59d782)
-- Add molecule test directory (6bddd38)
-- Refresh apt cache prior to running molecule tests (121c145)
 
 ### Testing
 
